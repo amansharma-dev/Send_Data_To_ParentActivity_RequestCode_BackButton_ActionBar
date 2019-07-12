@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Send_Data_To_ParentActivity_RequestCode_BackButton_ActionBar</string>
+    <string name="text_firstName">First Name :- </string>
+    <string name="text_lastName">Last Name :- </string>
+    <string name="editText_firstName">First Name</string>
+    <string name="editText_lastName">Last Name</string>
+    <string name="button_gotoTo2">Go To Activity_2</string>
+
 </resources>
