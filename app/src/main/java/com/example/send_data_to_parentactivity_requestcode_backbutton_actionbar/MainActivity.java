@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     public static final int NAME_REQUEST_CODE = 1001;
     public static final String FIRST_NAME = "first_name";
     public static final String LAST_NAME = "last_name";
-    private TextView firstName,lastName;
+    private TextView firstName,lastName,implicitText;
     private Button button;
 
 
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         firstName = findViewById(R.id.firstName_tv);
         lastName = findViewById(R.id.lastName_tv);
+        implicitText = findViewById(R.id.implicit_text_receiver);
 
         button = findViewById(R.id.button_toActivity2);
 
@@ -37,6 +39,18 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent,NAME_REQUEST_CODE);
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Intent intent = getIntent();
+        if (intent != null) {
+            String message =  intent.getStringExtra("IMPLICIT_TEXT");
+            if (message != null) {
+                implicitText.setText(message);
+            }
+        }
     }
 
     @Override

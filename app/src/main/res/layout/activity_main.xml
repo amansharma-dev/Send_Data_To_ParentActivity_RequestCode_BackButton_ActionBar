@@ -61,6 +61,15 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/implicit_text_receiver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Hello"
+        android:textSize="25sp"
+        android:layout_above="@id/button_toActivity2"
+        android:layout_marginBottom="25dp"
+        android:layout_centerHorizontal="true"/>
 
     <Button
         android:id="@+id/button_toActivity2"
