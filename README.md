@@ -1,5 +1,6 @@
 # Send Data To ParentActivity Using RequestCode & Return Result with Up Button in ActionBar.
 
+![](SendDataToParentActivity_gif.gif)
 
 ## Introduction
 
